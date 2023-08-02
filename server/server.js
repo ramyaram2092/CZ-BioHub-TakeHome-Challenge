@@ -5,6 +5,8 @@ const db = require("./config/db.config.js");
 const config = require("./config/config.js");
 const PORT = config.port;
 const createDBStructures = require("./models/fibonacci.db.model.js");
+const fibonacci = require("./models/helper.js");
+
 
 
 //Global variables
@@ -12,6 +14,13 @@ let preComputed=-1;
 let prev=0;
 let curr=1;
 
+// Enable CORS for all routes
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  next();
+});
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
