@@ -1,7 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import Axios from "axios";
 
 const Input = () => {
+  const navigate = useNavigate();
 
   const [value, setValue] = useState("");
 
@@ -18,7 +20,20 @@ const Input = () => {
     }
   };
 
-  const getOutput = async () => {
+  const findFibonacci = async () => {
+    const response = await Axios.post(
+        `http://localhost:8080/api/getFibonacci/${value}`
+      );
+      // console.log("recived response:"+response.data.length);
+  
+      if (response.data.length > 0) {
+        console.log("response:" + response.data.length);
+  
+        const arr = response.data.map((item) => item.value);
+        //navigate to the next page with the response
+  
+        navigate("Display", { state: arr });
+      }
     
   };
 
@@ -34,7 +49,7 @@ const Input = () => {
       <p>{err}</p>
       <button
         type="button"
-        onClick={() => getOutput()}
+        onClick={() => findFibonacci()}
       >
         Get the Fibonacci sequence
       </button>
