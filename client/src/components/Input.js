@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Axios from "axios";
+import "../styles/Input.module.css"; 
 
 const Input = () => {
   const navigate = useNavigate();
@@ -38,7 +39,8 @@ const Input = () => {
   };
 
   return (
-    <div >
+    <div className="container">
+        <div className="form-group">    
       <label htmlFor="title">Input</label>
       <input
         type="text"
@@ -46,6 +48,7 @@ const Input = () => {
         placeholder="Enter your number"
         onChange={handleInputChange}
       />
+      </div>
       <p>{err}</p>
       <button
         type="button"

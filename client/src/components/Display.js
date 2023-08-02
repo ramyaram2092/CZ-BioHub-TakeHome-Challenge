@@ -22,7 +22,6 @@ const Display = () => {
       )}
 
       <button
-        className="btn btn-outline-secondary"
         type="button"
         onClick={() => navigate("../")}
       >

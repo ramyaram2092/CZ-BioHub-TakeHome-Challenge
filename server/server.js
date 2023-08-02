@@ -1,12 +1,12 @@
+require('dotenv').config(); //loads the environment variables from the .env file into process.env,
 const express = require("express");
 const cors = require("cors");
 const app = express();
 const db = require("./config/db.config.js");
 const config = require("./config/config.js");
-const PORT = config.port;
+const PORT = process.env.NODE_DOCKER_PORT || 8080;
 const createDBStructures = require("./models/fibonacci.db.model.js");
 const fibonacci = require("./models/helper.js");
-
 
 
 //Global variables
@@ -16,7 +16,7 @@ let curr=1;
 
 // Enable CORS for all routes
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+  res.setHeader("Access-Control-Allow-Origin", process.env.CLIENT_ORIGIN);
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
   next();
