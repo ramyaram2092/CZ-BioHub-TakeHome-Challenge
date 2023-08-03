@@ -15,13 +15,12 @@ The front end communicates with the backend API, which is powered by Express and
 
 ## Branch Information 
 Developed the system in develop branch and merged into the main branch <br/>
-Latest code is available in both develop and main
-
+Latest  working code is available in main branch
 
 ## Installation
 ### Clone the repository:
 git clone https://github.com/ramyaram2092/fibonacci-generator.git <br />
-cd cz-biohub-takehome-challenge
+cd fibonacci-generator
 
 ### Install dependencies for both frontend and backend:
 
