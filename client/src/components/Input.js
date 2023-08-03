@@ -5,20 +5,23 @@ import "../styles/Input.module.css";
 
 const Input = () => {
   const navigate = useNavigate();
-
   const [value, setValue] = useState("");
-
   const [err, seterrmsg] = useState("");
+  const[status,setstatus]=useState(false);
+
 
   const handleInputChange = (event) => {
     const v = event.target.value;
+    const isValidInput = /^\d+$/.test(v)
     console.log("input in text box :" + Number.isInteger(parseInt(v)));
-    if (Number.isInteger(parseInt(v))) {
-      setValue(v);
-    } else {
-      seterrmsg("Enter a valid input");
-      console.log("Setting error message ");
-    }
+    if (isValidInput) {
+        setValue(v);
+        setstatus(true);
+      } else {
+        setstatus(false);
+        seterrmsg("Enter a valid input");
+        console.log("Setting error message ");
+      }
   };
 
   const findFibonacci = async () => {
@@ -52,7 +55,10 @@ const Input = () => {
       <p>{err}</p>
       <button
         type="button"
-        onClick={() => findFibonacci()}
+        onClick={() => {
+            if(status)
+                findFibonacci()}
+        }
       >
         Get the Fibonacci sequence
       </button>
