@@ -14,6 +14,10 @@ The front communicates with the backend API, which is powered by Express and sto
 - Backend: Express.js, Node.js
 - Database: MySQL
 
+## Branch Information 
+Developed the system in develop branch and merged into the main branch <br/>
+Latest code is available in both develop and main
+
 
 ## Installation
 ### Clone the repository:
