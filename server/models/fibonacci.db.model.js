@@ -11,6 +11,8 @@ const createFibonacciTableQuery = `
   )
 `;
 
+const dropDatabaseQuery=`DROP DATABASE IF EXISTS ${process.env.DB_NAME}`;
+
 function createDBStructures() {
   // Create database
   db.query(createDatabaseQuery, (err, result) => {
@@ -48,4 +50,16 @@ function createFibonacciTable() {
   });
 }
 
-module.exports = createDBStructures;
+
+const dropDatabase = (callback) => {
+  db.query(dropDatabaseQuery, (err, result) => {
+    if (err) {
+      console.log("Error Dropping db");
+    }
+    console.log('Database dropped successfully!');
+    callback(); // Call the callback function to exit the process
+
+  });
+};
+
+module.exports =  {createDBStructures,dropDatabase};

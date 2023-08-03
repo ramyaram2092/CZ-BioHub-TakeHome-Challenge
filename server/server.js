@@ -5,7 +5,7 @@ const app = express();
 const db = require("./config/db.config.js");
 const config = require("./config/config.js");
 const PORT = process.env.NODE_DOCKER_PORT || 8080;
-const createDBStructures = require("./models/fibonacci.db.model.js");
+const dbFunctions = require("./models/fibonacci.db.model.js");
 const fibonacci = require("./models/helper.js");
 
 
@@ -27,7 +27,14 @@ app.use(express.urlencoded({ extended: true }));
 
 
 // create database and  tables for the system 
-createDBStructures();
+dbFunctions.createDBStructures();
+
+// Handle the SIGINT signal (ctrl+c)
+process.on('SIGINT', () => {
+  dbFunctions.dropDatabase(() => {
+    process.exit(); // Exit the process after dropping the database
+  });
+});
 
 //test route
 app.get("/", (req, res) => {
