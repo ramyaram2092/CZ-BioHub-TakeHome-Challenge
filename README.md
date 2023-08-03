@@ -34,15 +34,24 @@ npm install
 
 ### Set up the database:
 
-Download mysql database update the .emv  file in the server/.env folder with your  credentials.<br />
-Note : The application takes care of creating database and table. Only the mysql crendtails like the username and password is needed 
+Download mysql database update the .env  file in the server/.env folder with your  credentials.<br />
+Note : The application takes care of creating database and table. Only the mysql crendtails like the username and password is needed <br />
+mysql server runs at port 3306
 
 ### Start the backend server:
 cd server<br />
-npm start / npm run dev
+npm start / npm run dev <br/>
+express server runs at http://localhost :8080
+
 
 ### Start the frontend development server:
 cd client <br />
-npm start
+npm start <br />
 
-The application will open at localhost :3000
+The client will open at http://localhost :3000
+
+
+## Demo
+
+https://github.com/ramyaram2092/CZ-BioHub-TakeHome-Challenge/assets/89441435/ead70105-b704-4fd4-b2a9-ee5902901cb2
+
