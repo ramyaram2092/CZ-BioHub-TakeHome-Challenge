@@ -10,7 +10,7 @@ const fibonacci = require("./models/helper.js");
 
 
 //Global variables
-let preComputed=-1;
+let preComputed=0;
 let prev=0;
 let curr=1;
 
@@ -59,7 +59,7 @@ app.post("/api/getFibonacci/:number", (req, res) => {
           // if it hasn't been computed yet. Precompute
           if (records === 0) {
             console.log("There is no record hence I need to compute");
-            for (let i = preComputed + 1; i <= number; i++) {
+            for (let i = preComputed ; i <number; i++) {
               console.log("i:"+i);
               const value =  fibonacci(i,prev,curr);
               prev=curr;
