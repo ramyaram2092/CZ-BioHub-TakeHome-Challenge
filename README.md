@@ -3,7 +3,7 @@
 A simple full stack application which computes  and displays the fibonacci sequence 
 
 ## Description 
-The front communicates with the backend API, which is powered by Express and stores data in a Relational database. 
+The front end communicates with the backend API, which is powered by Express and stores data in a Relational database. 
 - The front has two pages. The first page has an input box and a button where the user is prompted to type the fibonacci sequence's length
 - The second page displays the  requested fibonacci sequence seperated by commas with a provison to return back to the previous page 
 
