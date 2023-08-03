@@ -55,3 +55,7 @@ https://github.com/ramyaram2092/CZ-BioHub-TakeHome-Challenge/assets/89441435/ead
 
 ## Design Decisions
 [DesignDecisions.pdf](https://github.com/ramyaram2092/CZ-BioHub-TakeHome-Challenge/files/12246072/DesignDecisions.pdf)
+
+## Limitations
+
+[Limitations.pdf](https://github.com/ramyaram2092/fibonacci-generator/files/12246243/Limitations.pdf)
