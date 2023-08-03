@@ -17,7 +17,7 @@ The front communicates with the backend API, which is powered by Express and sto
 
 ## Installation
 ### Clone the repository:
-git clone https://github.com/ramyaram2092/cz-biohub-takehome-challenge.git<br />
+git clone [https://github.com/ramyaram2092/cz-biohub-takehome-challenge.git](https://github.com/ramyaram2092/CZ-BioHub-TakeHome-Challenge.git)<br />
 cd cz-biohub-takehome-challenge
 
 ### Install dependencies for both frontend and backend:
