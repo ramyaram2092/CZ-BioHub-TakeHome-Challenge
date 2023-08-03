@@ -1,4 +1,3 @@
-# CZ-BioHub-TakeHome-Challenge
 
 ## Fibonacci Sequence Generator
 A simple full stack application which computes  and displays the fibonacci sequence 
@@ -52,6 +51,8 @@ The client will open at http://localhost :3000
 
 
 ## Demo
-
 https://github.com/ramyaram2092/CZ-BioHub-TakeHome-Challenge/assets/89441435/ead70105-b704-4fd4-b2a9-ee5902901cb2
 
+
+## Design Decisions
+[DesignDecisions.pdf](https://github.com/ramyaram2092/CZ-BioHub-TakeHome-Challenge/files/12246072/DesignDecisions.pdf)
