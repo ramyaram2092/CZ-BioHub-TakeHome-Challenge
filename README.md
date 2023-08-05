@@ -48,9 +48,9 @@ npm start <br />
 
 The client will open at http://localhost :3000
 
-
 ## Demo
-https://github.com/ramyaram2092/CZ-BioHub-TakeHome-Challenge/assets/89441435/ead70105-b704-4fd4-b2a9-ee5902901cb2
+https://github.com/ramyaram2092/fibonacci-generator/assets/89441435/e7b5d037-0eb4-4d8f-b8e1-89ee6e3a62ab
+
 
 
 ## Design Decisions
